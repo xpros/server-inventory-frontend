@@ -1,0 +1,18 @@
+<!-- servers.component.html -->
+<div>
+  <h1>Welcome to our server app!</h1>
+  <p>Here are our servers:</p>
+  
+  <div>
+    <button (click)="exportToCsv()">Export to CSV</button>
+    <ag-grid-angular
+      class="ag-theme-alpine"
+      style="width: 100%; height: 600px;"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [sortingOrder]="sortingOrder"
+      [rowData]="rowData"
+      (gridReady)="onGridReady($event)"
+    ></ag-grid-angular>
+  </div>
+</div>
